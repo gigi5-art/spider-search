@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Spider-Search 🕷️</title>
 
     <link rel="stylesheet" href="style.css">
@@ -8,11 +11,62 @@
 
 <body>
 
-    <h1>🕷️ SPIDER-SEARCH</h1>
-    <p>Your friendly neighborhood search engine.</p>
+    <main class="container">
 
-    <input type="text" placeholder="Search the Spider-Verse...">
-    <button>WEB</button>
+        <div class="logo">
+            <span class="spider">🕷️</span>
+            SPIDER-SEARCH
+        </div>
+
+        <p class="subtitle">
+            Your friendly neighborhood search engine.
+        </p>
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                class="search-box"
+                id="searchInput"
+                placeholder="Search the Spider-Verse..."
+                autocomplete="off"
+            >
+
+            <button class="web-button" onclick="searchSpiderVerse()">
+                WEB
+            </button>
+
+        </div>
+
+        <div class="trending">
+
+            <div class="trending-title">
+                🕸️ Trending searches
+            </div>
+
+            <span onclick="quickSearch('Peter Parker')">
+                Peter Parker
+            </span>
+
+            <span onclick="quickSearch('Miles Morales')">
+                Miles Morales
+            </span>
+
+            <span onclick="quickSearch('Gwen Stacy')">
+                Gwen Stacy
+            </span>
+
+            <span onclick="quickSearch('Venom')">
+                Venom
+            </span>
+
+        </div>
+
+        <div id="results" class="results"></div>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
